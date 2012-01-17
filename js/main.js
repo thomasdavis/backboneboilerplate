@@ -5,24 +5,29 @@
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
+    // Major libraries
     jquery: 'libs/jquery/jquery-min',
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-optamd3-min',
+    sinon: 'libs/sinon/sinon.js',
+
+    // Require.js plugins
     text: 'libs/require/text',
+    order: 'libs/require/order',
+
+    // Just a short cut so we can put our html outside the js dir
     templates: '../templates'
   }
 
 });
 
+// Let's kick off the application
+
 require([
-
-  // Load our app module and pass it to our definition function
-  'app'
-
-  // Some plugins have to be loaded in order due to their non AMD compliance
-  // Because these scripts are not "modules" they do not pass any values to the definition function below
-], function(App){
-  // The "app" dependency is passed in as "App"
-  // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
-  App.initialize();
+  'views/app',
+  'router'
+], function(AppView, Router){
+  var appView = new AppView;
+  appView.render();  
+  Router.initialize();
 });

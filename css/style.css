@@ -197,60 +197,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 /* =============================================================================
-   Primary styles
-   Author: 
-   ========================================================================== */
-body {
-  background: #ebebeb;
-}
-
-#container {
-  width: 960px;
-  margin: auto;
-  min-height: 500px;
-  background: #fff;
-}
-#menu {
-  background: #444;
-  height: 30px; color: #fff; text-align: right;
-}
-#menu ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-#menu ul li {
-  float: left;
-  margin-left: 10px;
-}
-#menu ul li a {
-  color: #fff;
-  line-height: 30px;
-  text-decoration: none;
-}
-#menu ul li a:hover {
-  color: #ccc;
-}
-#container {
-
-}
-#logo {
-   padding: 20px;
-}
-h1{
-  padding: 0;
-  margin: 0;
-}
-#page {
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
-  min-height: 400px;
-  padding: 20px;
-}
-
-#footer {
-  text-align: center;
-}
-/* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
    ========================================================================== */
