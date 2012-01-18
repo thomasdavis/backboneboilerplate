@@ -5,10 +5,6 @@
 @import url("normalize.css");
 @import url("debugCSS.css");
 
-/* Third Party Theme */
-/* https://github.com/pilu/web-app-theme */
-@import url("web-app-theme/css/base.css");
-@import url("web-app-theme/css/themes/default/style.css");
 /* Custom themes */
 @import url("menus.css");
 @import url("layout.css");

@@ -5,5 +5,7 @@ body {
 .container {
   margin: auto;
   width: 660px; 
-  background: #ebebeb;
+}
+.page {
+  margin: 10px 0 10px 0;
 }
