@@ -5,7 +5,7 @@ define([
   'text!templates/layout.html' 
 ], function($, _, Backbone, layoutTemplate){
   var AppView = Backbone.View.extend({
-    el: $('.container'),
+    el: $('#container'),
     intialize: function () {
     },
     render: function () {
