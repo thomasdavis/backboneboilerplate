@@ -1,0 +1,358 @@
+/***********/
+/* LICENSE */
+/***********/
+
+/* Copyrights for code authored by Yahoo! Inc. is licensed under the following terms:
+   MIT License
+   Copyright (c) 2011 Yahoo! Inc. All Rights Reserved.
+   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/*****************/
+/* WHAT IS THIS? */
+/*****************/
+
+/* debugCSS is meant to be loaded on an existing page to highlight potentially
+   broken, malformed or legacy (X)HTML.  Not all "errors" are created equally,
+   so they are color coded to highlight severity.  Green is "probably not a big
+   problem", yellow is "worth looking at" and red is "you really should fix
+   this."  Red severity is currently not used, but can be made available for
+   future revisions.
+
+   Red: #FF8888;
+   Yellow: #FFFF88;
+   Green: #88FF88;
+*/
+
+/******************/
+/* ERROR MESSAGES */
+/******************/
+
+/* All errors should try to post a message explaining the problem. */
+table:not([summary]):after,
+table > tr:after,
+table th:not([scope]):after,
+table thead td:after,
+table > tbody:first-child:after,
+table > tbody + tfoot:after,
+table > tr:first-child:last-child:after,
+table > tbody > tr:first-child:last-child:after,
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after,
+table[align]:after,
+table[bgcolor]:after,
+table[border]:after,
+table[cellpadding]:after,
+table[cellspacing]:after,
+table[width]:after,
+img:not([alt]):after,
+a:not([href]):after,
+a[href="#"]:after,
+a[href*=javascript\:]:after,
+a[onclick]:after,
+a[onmouseover]:after,
+a[onmouseout]:after,
+label:not([for]):after,
+nav:not([role]):after,
+div[role="img"]:not([aria-label]):after,
+h1 div:after,
+h2 div:after,
+h3 div:after,
+h4 div:after,
+h5 div:after,
+h6 div:after,
+a div:after,
+span div:after,
+html[xmlns] a h1:after, /* Try to select only in XHTML documents (thanks, Thierry). */
+html[xmlns] a h2:after,
+html[xmlns] a h3:after,
+html[xmlns] a h4:after,
+html[xmlns] a h5:after,
+html[xmlns] a h6:after,
+ol > *:not(li),
+ul > *:not(li),
+dl > *:not(dt):not(dd):after,
+form > *:not(fieldset):after,
+fieldset > *:not(legend):first-child:after,
+iframe:not([title]):after,
+center:after,
+u:after,
+font:after,
+map:after,
+br + *:not(br):before,
+br + br + *:before,
+b:after,
+i:after,
+blink:after,
+marquee:after {
+  border: 1px solid #000;
+  color: #000;
+  display: block;
+  font-family: helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.3em;
+  padding: .1em .3em;
+  position: absolute;
+  text-decoration: none;
+  text-transform: none;
+  z-index: 99999;
+}
+
+/* Each error message will have a color for severity (green, yellow, red) and a
+   message.  Even if the content isn't able to be displayed (such as with
+   images), they're used so you can quickly see the message when inspecting the
+   element.
+*/
+
+table:not([summary]):after {
+  background: #88FF88;
+  content: 'Should you have a SUMMARY attribute on your TABLE?';
+}
+
+table > tr:after {
+  background: #FFFF88;
+  content: 'TABLE does not have a TBODY.';
+}
+
+table th:not([scope]):after {
+  background: #88FF88;
+  content: 'Should TH have a SCOPE attribute (ROW or COL)?.';
+}
+
+table thead td:after {
+  background: #88FF88;
+  content: 'Cells in THEAD should be TH.';
+}
+
+table > tbody:first-child:after {
+  background: #88FF88;
+  content: 'Do you need a THEAD or TFOOT?';
+}
+
+table > tbody + tfoot:after {
+  background: #FFFF88;
+  content: 'TBODY should come after TFOOT.';
+}
+
+table > tr:first-child:last-child:after,
+table > tbody > tr:first-child:last-child:after {
+  background: #88FF88;
+  content: 'Only one TR in TABLE.  Are you using it for layout?';
+}
+
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after {
+  background: #FFFF88;
+  content: 'Only THEAD/TFOOT/TBODY/COLGROUP/CAPTION/TR can be children of a TABLE';
+}
+
+table[align]:after,
+table[bgcolor]:after,
+table[border]:after,
+table[cellpadding]:after,
+table[cellspacing]:after,
+table[width]:after {
+  background: #FFFF88;
+  content: 'Element has inline style.';
+}
+
+img:not([alt]):after {
+  background: #FFFF88;
+  content: 'Image does not have an ALT attribute.';
+}
+
+a[href="#"]:after,
+a:not([href]):after {
+  background: #FFFF88;
+  content: 'Anchor tag is # or does not exist - does not degrade gracefully.';
+}
+
+a[href*=javascript\:]:after,
+a[onclick]:after,
+a[onmouseover]:after,
+a[onmouseout]:after {
+  background: #FFFF88;
+  content: 'Inline JS on anchor.';
+}
+
+label:not([for]):after {
+  background: #FFFF88;
+  content: 'Should LABEL have a FOR attribute?';
+}
+
+nav:not([role]):after {
+  background: #FFFF88;
+  content: 'NAV element should have a ROLE attribute.';
+}
+
+div[role="img"]:not([aria-label]):after {
+  background: #FFFF88;
+  content: 'DIV used as image should have ARIA-LABEL.';
+}
+
+h1 div:after,
+h2 div:after,
+h3 div:after,
+h4 div:after,
+h5 div:after,
+h6 div:after,
+a div:after,
+span div:after,
+html[xmlns] a h1:after,
+html[xmlns] a h2:after,
+html[xmlns] a h3:after,
+html[xmlns] a h4:after,
+html[xmlns] a h5:after,
+html[xmlns] a h6:after {
+  background: #FFFF88;
+  content: 'Block level element within inline element.';
+}
+
+ol > *:not(li):after,
+ul > *:not(li):after {
+  background: #FFFF88;
+  content: 'Only LIs can be children of UL or OL';
+}
+
+dl > *:not(dt):not(dd):after {
+  background: #FFFF88;
+  content: 'Only DT/DD can be children of a DL';
+}
+
+form > *:not(fieldset):after {
+  background: #88FF88;
+  content: 'Should you be using a FIELDSET?';
+}
+
+fieldset > *:not(legend):first-child:after {
+  background: #88FF88;
+  content: 'Should your FIELDSET be using a LEGEND?';
+}
+
+iframe:not([title]):after {
+  background: #88FF88;
+  content: 'IFRAME lacks TITLE attribute.';
+}
+
+center:after,
+u:after,
+font:after {
+  background: #FFFF88;
+  content: 'Deprecated tag used.';
+}
+
+/* These may not be "wrong", but let's bug you anyway. */
+map:after {
+  background: #88FF88;
+  content: 'Is MAP appropriate here?';
+}
+
+br + *:not(br):before {
+  background: #88FF88;
+  content: 'Is BR appropriate here?';
+}
+
+br + br + *:before {
+  background: #88FF88;
+  content: 'Should you be using a P tag?';
+}
+
+b:after,
+i:after {
+  background: #88FF88;
+  content: 'Should you be using STRONG or EM?';
+}
+
+blink:after,
+marquee:after {
+  background: #FFFF88;
+  content: 'Should you be using STRONG or EM?';
+}
+
+/******************/
+/* ERROR OUTLINES */
+/******************/
+
+/* In addition to printing the error message next to the element, outline the
+   element so it's easy to spot.  Use outline instead of border to avoid
+   messing with the document flow.
+*/
+
+table:not([summary]),
+table th:not([scope]),
+table thead td,
+table > tr:first-child:last-child,
+table > tbody > tr:first-child:last-child,
+table > tbody:first-child,
+form > *:not(fieldset),
+fieldset > *:not(legend):first-child,
+map,
+br,
+b,
+i {
+  outline: 5px solid #88FF88;
+}
+
+table > tr,
+table > tbody + tfoot,
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption),
+table[align],
+table[bgcolor],
+table[border],
+table[cellpadding],
+table[cellspacing],
+table[width],
+img:not([alt]),
+a:not([href]),
+a[href="#"],
+a[href*=javascript\:],
+a[onclick],
+a[onmouseover],
+a[onmouseout],
+label:not([for]),
+nav:not([role]),
+div[role="img"]:not([aria-label]),
+h1 div,
+h2 div,
+h3 div,
+h4 div,
+h5 div,
+h6 div,
+a div,
+span div,
+html[xmlns] a h1,
+html[xmlns] a h2,
+html[xmlns] a h3,
+html[xmlns] a h4,
+html[xmlns] a h5,
+html[xmlns] a h6,
+ol > *:not(li),
+ul > *:not(li),
+dl > *:not(dt):not(dd),
+iframe:not([title]),
+center,
+u,
+font,
+blink,
+marquee {
+  outline: 5px solid #FFFF88;
+}
+
+/*********/
+/* EXTRA */
+/*********/
+
+/* Stuff that helps in developing / debugging, but don't quite fit anywhere
+   else.
+*/
+
+body > img:only-child {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF/+Pj2tra2dnZ4Z9gVgAAAHxJREFUGBkFwUGKxDAQBDB9shqcuw2T/3TAc5+A95UruZv+IoNqvEWCavLFDB2M5vPgGpyFNOcB80cPJMxgHhLkQ4IxuBorpDA3Y+MazEfC2+gwgnOxHnSogb15F1JcGxmkcBb1AwlVqCIHadZGwt+NGmQhD1lIuB+scOUfnCk3BP0u5SsAAAAASUVORK5CYII=);
+  border: 50px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+}

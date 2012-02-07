@@ -25,6 +25,7 @@ define([
     },
     defaultAction: function(actions){
       // We have no matching route, lets display the dashboard 
+      
       this.dashboard();
     }
   });

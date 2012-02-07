@@ -1,0 +1,371 @@
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; }
+svg:not(:root) {
+    overflow: hidden;
+}
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+label { cursor: pointer; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+table { border-collapse: collapse; border-spacing: 0; }
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+@media only screen and (min-width: 480px) {
+  
+}
+@media only screen and (min-width: 768px) {
+  
+}
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+table:not([summary]):after,
+table > tr:after,
+table th:not([scope]):after,
+table thead td:after,
+table > tbody:first-child:after,
+table > tbody + tfoot:after,
+table > tr:first-child:last-child:after,
+table > tbody > tr:first-child:last-child:after,
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after,
+table[align]:after,
+table[bgcolor]:after,
+table[border]:after,
+table[cellpadding]:after,
+table[cellspacing]:after,
+table[width]:after,
+img:not([alt]):after,
+a:not([href]):after,
+a[href="#"]:after,
+a[href*=javascript\:]:after,
+a[onclick]:after,
+a[onmouseover]:after,
+a[onmouseout]:after,
+label:not([for]):after,
+nav:not([role]):after,
+div[role="img"]:not([aria-label]):after,
+h1 div:after,
+h2 div:after,
+h3 div:after,
+h4 div:after,
+h5 div:after,
+h6 div:after,
+a div:after,
+span div:after,
+html[xmlns] a h1:after, 
+html[xmlns] a h2:after,
+html[xmlns] a h3:after,
+html[xmlns] a h4:after,
+html[xmlns] a h5:after,
+html[xmlns] a h6:after,
+ol > *:not(li),
+ul > *:not(li),
+dl > *:not(dt):not(dd):after,
+form > *:not(fieldset):after,
+fieldset > *:not(legend):first-child:after,
+iframe:not([title]):after,
+center:after,
+u:after,
+font:after,
+map:after,
+br + *:not(br):before,
+br + br + *:before,
+b:after,
+i:after,
+blink:after,
+marquee:after {
+  border: 1px solid #000;
+  color: #000;
+  display: block;
+  font-family: helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.3em;
+  padding: .1em .3em;
+  position: absolute;
+  text-decoration: none;
+  text-transform: none;
+  z-index: 99999;
+}
+table:not([summary]):after {
+  background: #88FF88;
+  content: 'Should you have a SUMMARY attribute on your TABLE?';
+}
+table > tr:after {
+  background: #FFFF88;
+  content: 'TABLE does not have a TBODY.';
+}
+table th:not([scope]):after {
+  background: #88FF88;
+  content: 'Should TH have a SCOPE attribute (ROW or COL)?.';
+}
+table thead td:after {
+  background: #88FF88;
+  content: 'Cells in THEAD should be TH.';
+}
+table > tbody:first-child:after {
+  background: #88FF88;
+  content: 'Do you need a THEAD or TFOOT?';
+}
+table > tbody + tfoot:after {
+  background: #FFFF88;
+  content: 'TBODY should come after TFOOT.';
+}
+table > tr:first-child:last-child:after,
+table > tbody > tr:first-child:last-child:after {
+  background: #88FF88;
+  content: 'Only one TR in TABLE.  Are you using it for layout?';
+}
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after {
+  background: #FFFF88;
+  content: 'Only THEAD/TFOOT/TBODY/COLGROUP/CAPTION/TR can be children of a TABLE';
+}
+table[align]:after,
+table[bgcolor]:after,
+table[border]:after,
+table[cellpadding]:after,
+table[cellspacing]:after,
+table[width]:after {
+  background: #FFFF88;
+  content: 'Element has inline style.';
+}
+img:not([alt]):after {
+  background: #FFFF88;
+  content: 'Image does not have an ALT attribute.';
+}
+a[href="#"]:after,
+a:not([href]):after {
+  background: #FFFF88;
+  content: 'Anchor tag is # or does not exist - does not degrade gracefully.';
+}
+a[href*=javascript\:]:after,
+a[onclick]:after,
+a[onmouseover]:after,
+a[onmouseout]:after {
+  background: #FFFF88;
+  content: 'Inline JS on anchor.';
+}
+label:not([for]):after {
+  background: #FFFF88;
+  content: 'Should LABEL have a FOR attribute?';
+}
+nav:not([role]):after {
+  background: #FFFF88;
+  content: 'NAV element should have a ROLE attribute.';
+}
+div[role="img"]:not([aria-label]):after {
+  background: #FFFF88;
+  content: 'DIV used as image should have ARIA-LABEL.';
+}
+h1 div:after,
+h2 div:after,
+h3 div:after,
+h4 div:after,
+h5 div:after,
+h6 div:after,
+a div:after,
+span div:after,
+html[xmlns] a h1:after,
+html[xmlns] a h2:after,
+html[xmlns] a h3:after,
+html[xmlns] a h4:after,
+html[xmlns] a h5:after,
+html[xmlns] a h6:after {
+  background: #FFFF88;
+  content: 'Block level element within inline element.';
+}
+ol > *:not(li):after,
+ul > *:not(li):after {
+  background: #FFFF88;
+  content: 'Only LIs can be children of UL or OL';
+}
+dl > *:not(dt):not(dd):after {
+  background: #FFFF88;
+  content: 'Only DT/DD can be children of a DL';
+}
+form > *:not(fieldset):after {
+  background: #88FF88;
+  content: 'Should you be using a FIELDSET?';
+}
+fieldset > *:not(legend):first-child:after {
+  background: #88FF88;
+  content: 'Should your FIELDSET be using a LEGEND?';
+}
+iframe:not([title]):after {
+  background: #88FF88;
+  content: 'IFRAME lacks TITLE attribute.';
+}
+center:after,
+u:after,
+font:after {
+  background: #FFFF88;
+  content: 'Deprecated tag used.';
+}
+map:after {
+  background: #88FF88;
+  content: 'Is MAP appropriate here?';
+}
+br + *:not(br):before {
+  background: #88FF88;
+  content: 'Is BR appropriate here?';
+}
+br + br + *:before {
+  background: #88FF88;
+  content: 'Should you be using a P tag?';
+}
+b:after,
+i:after {
+  background: #88FF88;
+  content: 'Should you be using STRONG or EM?';
+}
+blink:after,
+marquee:after {
+  background: #FFFF88;
+  content: 'Should you be using STRONG or EM?';
+}
+table:not([summary]),
+table th:not([scope]),
+table thead td,
+table > tr:first-child:last-child,
+table > tbody > tr:first-child:last-child,
+table > tbody:first-child,
+form > *:not(fieldset),
+fieldset > *:not(legend):first-child,
+map,
+br,
+b,
+i {
+  outline: 5px solid #88FF88;
+}
+table > tr,
+table > tbody + tfoot,
+table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption),
+table[align],
+table[bgcolor],
+table[border],
+table[cellpadding],
+table[cellspacing],
+table[width],
+img:not([alt]),
+a:not([href]),
+a[href="#"],
+a[href*=javascript\:],
+a[onclick],
+a[onmouseover],
+a[onmouseout],
+label:not([for]),
+nav:not([role]),
+div[role="img"]:not([aria-label]),
+h1 div,
+h2 div,
+h3 div,
+h4 div,
+h5 div,
+h6 div,
+a div,
+span div,
+html[xmlns] a h1,
+html[xmlns] a h2,
+html[xmlns] a h3,
+html[xmlns] a h4,
+html[xmlns] a h5,
+html[xmlns] a h6,
+ol > *:not(li),
+ul > *:not(li),
+dl > *:not(dt):not(dd),
+iframe:not([title]),
+center,
+u,
+font,
+blink,
+marquee {
+  outline: 5px solid #FFFF88;
+}
+body > img:only-child {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF/+Pj2tra2dnZ4Z9gVgAAAHxJREFUGBkFwUGKxDAQBDB9shqcuw2T/3TAc5+A95UruZv+IoNqvEWCavLFDB2M5vPgGpyFNOcB80cPJMxgHhLkQ4IxuBorpDA3Y+MazEfC2+gwgnOxHnSogb15F1JcGxmkcBb1AwlVqCIHadZGwt+NGmQhD1lIuB+scOUfnCk3BP0u5SsAAAAASUVORK5CYII=);
+  border: 50px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+}
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  float: left;
+  margin-left: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: auto;
+  width: 660px; 
+}
+.page {
+  margin: 10px 0 10px 0;
+}
