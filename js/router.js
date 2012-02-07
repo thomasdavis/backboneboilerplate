@@ -6,9 +6,17 @@ define([
 ], function ($, _, Backbone) {
   var AppRouter = Backbone.Router.extend({
     routes: {
+	  '/modules': 'modules',	
+		
       // Default
       '*actions': 'defaultAction'
     },
+    modules: function () {
+      require(['views/modules/page'], function (ModulePage) {
+        var modulePage = new ModulePage();
+        modulePage.render();
+      });	  	
+	},
     dashboard: function () {
       require(['views/dashboard/page'], function (DashboardPage) {
         var dashboardPage = new DashboardPage();

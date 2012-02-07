@@ -9,7 +9,7 @@ define([
     intialize: function () {
     },
     render: function () {
-      this.el.html(headerMenuTemplate);
+      $(this.el).html(headerMenuTemplate);
     } 
   })
 

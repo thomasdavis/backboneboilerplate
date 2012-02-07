@@ -7,7 +7,7 @@ define([
   var DashboardPage = Backbone.View.extend({
     el: $('.page'),
     render: function () {
-      this.el.html(dashboardPageTemplate);
+      $(this.el).html(dashboardPageTemplate);
     }
   });
   return DashboardPage;

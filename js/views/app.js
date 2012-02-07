@@ -9,7 +9,7 @@ define([
     intialize: function () {
     },
     render: function () {
-      this.el.html(layoutTemplate);
+      $(this.el).html(layoutTemplate);
       require(['views/header/menu'], function (HeaderMenuView) {
         var headerMenuView = new HeaderMenuView();
         headerMenuView.render();

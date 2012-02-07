@@ -1,7 +1,7 @@
-// Require.js allows us to configure shortcut alias
-// Their usage will become more apparent futher along in the tutorial.
-require.config({
-  paths: {
+({
+    appDir: "../js",
+    baseUrl: ".",
+    paths: {
     // Major libraries
     jquery: 'libs/jquery/jquery-min',
     underscore: 'libs/underscore/underscore-min', // https://github.com/amdjs
@@ -16,16 +16,4 @@ require.config({
     // When you have HTML/CSS designers this aids in keeping them out of the js directory
     templates: '../templates'
   }
-
-});
-
-// Let's kick off the application
-
-require([
-  'views/app',
-  'router'
-], function(AppView, Router){
-  var appView = new AppView;
-  appView.render();  
-  Router.initialize();
-});
+})
