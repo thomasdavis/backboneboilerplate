@@ -1,5 +1,8 @@
- language: node_js
- node_js:
-   - 0.4
-   - 0.6
-   - 0.7 # development version of 0.8, may be unstable
+language: node_js
+
+# test on two node.js versions: 0.4 and 0.6
+node_js:
+  - 0.4
+  - 0.6
+  - 0.7
+
