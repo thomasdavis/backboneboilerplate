@@ -10,6 +10,7 @@ define([
     },
     render: function () {
       $(this.el).html(headerMenuTemplate);
+      $('a[href="' + window.location.hash + '"]').addClass('active');
     },
     events: {
       'click a': 'highlightMenuItem'
