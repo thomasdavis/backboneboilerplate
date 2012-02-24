@@ -10,7 +10,14 @@ define([
     },
     render: function () {
       $(this.el).html(headerMenuTemplate);
-    } 
+    },
+    events: {
+      'click a': 'highlightMenuItem'
+    },
+    highlightMenuItem: function (ev) {
+      $('.active').removeClass('active');
+      $(ev.currentTarget).addClass('active');
+    }
   })
 
   return HeaderMenuView;
