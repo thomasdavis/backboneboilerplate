@@ -7,7 +7,7 @@ define([
   var ModulesPage = Backbone.View.extend({
     el: '.page',
     render: function () {
-      $(this.el).html(modulesPageTemplate);
+      this.$el.html(modulesPageTemplate);
     }
   });
   return ModulesPage;
