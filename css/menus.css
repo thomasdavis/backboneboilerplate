@@ -8,3 +8,6 @@
   margin-left: 10px;
 }
 
+.menu li.other-link {
+  float: right;
+}
