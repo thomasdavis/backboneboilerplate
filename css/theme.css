@@ -14,3 +14,12 @@ code {
   font-size:11px;
   padding:0.2em;
 }
+
+a, a:visited {
+  color: #444;
+}
+ 
+a:hover {
+  color: #000;
+  text-decoration: none;
+} 

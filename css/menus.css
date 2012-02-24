@@ -7,11 +7,4 @@
   float: left;
   margin-left: 10px;
 }
-.menu li a {
-  color: #444;
-}
- 
-.menu li a:hover {
-  color: #000;
-  text-decoration: none;
-} 
+

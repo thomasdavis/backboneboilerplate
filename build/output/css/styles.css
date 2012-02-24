@@ -78,6 +78,29 @@ table { border-collapse: collapse; border-spacing: 0; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
 }
+.container {
+  background-color: #fff;
+}
+body {
+  color: #444;
+}
+code {
+  border:1px dashed #E1E1E1;
+  color:#333344;
+  background:#FAFAFA;
+  font-family:monospace;
+  overflow:auto;
+  font-size:11px;
+  padding:0.2em;
+}
+a, a:visited {
+  color: #444;
+}
+ 
+a:hover {
+  color: #000;
+  text-decoration: none;
+} 
 .menu {
   margin: 0;
   padding: 0;

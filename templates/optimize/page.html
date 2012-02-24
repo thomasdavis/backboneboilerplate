@@ -6,3 +6,14 @@
   <li>Execute <code>./build.sh</code> inside the build folder</li>
   <li>Find your ready to go application in `/build/output`</li>
 </ol>
+
+<h3>Explanation</h3>
+<p>
+  The build process uses the require.js optimizer called r.js, it traverses through the dependency list and compiles and minifies them intelligently.
+</p>
+<p>
+ Using r.js once again it runs over styles.css and inlines all the style sheets into one and then minifies the file.
+</p>
+<p>
+  Finally it creates a directory for your output and replaces the relative path to require.js with the latest version hosted on <a href="http://cdnjs.com">cdnjs.com</a>
+</p>
