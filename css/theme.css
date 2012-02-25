@@ -23,3 +23,7 @@ a:hover {
   color: #000;
   text-decoration: none;
 } 
+
+.un-bulleted {
+  list-style: none;
+}

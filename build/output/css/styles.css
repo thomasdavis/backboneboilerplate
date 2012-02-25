@@ -101,6 +101,9 @@ a:hover {
   color: #000;
   text-decoration: none;
 } 
+.un-bulleted {
+  list-style: none;
+}
 .menu {
   margin: 0;
   padding: 0;
