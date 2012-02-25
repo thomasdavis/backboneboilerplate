@@ -1,0 +1,20 @@
+{
+  "author": "Thomas Davies <thomasalwyndavis@gmail.com> (http://backbonetutorials.com/)",
+  "name": "backboneboilerplate",
+  "description": "A modular backbone environment",
+  "version": "0.0.0",
+  "homepage": "http://backboneboilerplate.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thomasdavis/backboneboilerplate.git"
+  },
+  "main": "build/server",
+  "engines": {
+    "node": "~0.6.11"
+  },
+  "dependencies": {
+    "express": "~2.5.8"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
