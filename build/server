@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require("fs");
 var express = require("express");
 var site = express.createServer();
@@ -12,4 +14,5 @@ site.get("*", function(req, res) {
 
 site.listen(1337);
 
-console.log("Server listening on http://localhost:1337");
+console.info("Welcome to Backbone Boilerplate")
+console.info("Open in your browser: http://localhost:1337");
