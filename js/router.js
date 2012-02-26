@@ -9,6 +9,8 @@ define([
       // Pages
       '/modules': 'modules',	
       '/optimize': 'optimize',
+      '/backbone/:section': 'backbone',
+      '/backbone': 'backbone',
     
       // Default - catch all
       '*actions': 'defaultAction'
@@ -20,9 +22,15 @@ define([
       });	  	
     },
     optimize: function () {
-      require(['views/optimize/page'], function (ModulePage) {
-        var modulePage = new ModulePage();
-        modulePage.render();
+      require(['views/optimize/page'], function (OptimizePage) {
+        var optimizePage = new OptimizePage();
+        optimizePage.render();
+      });
+    },
+    backbone: function (section) {
+      require(['views/backbone/page'], function (BackbonePage) {
+        var backbonePage = new BackbonePage({section: section});
+        backbonePage.render();
       });
     },
     dashboard: function () {
