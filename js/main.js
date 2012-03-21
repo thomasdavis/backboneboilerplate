@@ -26,6 +26,7 @@ require([
   'router'
 ], function(AppView, Router){
   var appView = new AppView;
+  window.app = appView;
   appView.render();  
   Router.initialize();
 });
