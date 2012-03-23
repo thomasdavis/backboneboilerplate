@@ -548,5 +548,4 @@ Renderer.prototype.start = function() {
 	});
 };
 
-return Graph;
 });

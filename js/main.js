@@ -23,10 +23,10 @@ require.config({
 
 require([
   'views/app',
-  'router'
-], function(AppView, Router){
-  var appView = new AppView;
-  window.app = appView;
-  appView.render();  
-  Router.initialize();
+  'router',
+  'vm'
+], function(AppView, Router, Vm){
+  var appView = Vm.create({}, 'AppView', AppView);
+  appView.render();
+  Router.initialize({appView: appView});  // The router now has a copy of all main appview
 });

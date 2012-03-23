@@ -2,18 +2,24 @@
 define([
   'jquery',
   'underscore',
-  'backbone'
-], function($, _, Backbone){
-	var children = 1;
+  'backbone',
+  'events'
+], function($, _, Backbone, Events){
 	var create = function (context, name, View, options) {
-		console.log(context);
-		if(typeof context.children === 'undefined') {
-			context.children = {};
+		var view = new View(options);
+		if(typeof context.children === 'undefined'){
+		  context.children = {};
+		  context.children[name] = view;
+		} else {
+		console.log('hrmm', name);
+		  context.children[name] = view;
 		}
-		var view = new View();
-		context.children[name] = view;
+		console.log('errrrrr', name);
+		Events.trigger('viewCreated');
 		return view;
 	}
+	
+	
   return {
   	create: create
   };
