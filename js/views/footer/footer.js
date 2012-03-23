@@ -12,36 +12,37 @@ define([
 
     },
     render: function () {
-		that = this;
       $(this.el).html(footerTemplate);
-					function renderSpringy() {
-		
-		that.graph = graph = new Springy();
-			var blue = function (context, parentName, first) {
-					if(typeof first === 'undefined'){
+			this.renderSpringy();
+			Events.on('viewCreated', this.renderSpringy, this);
+    },
+		renderSpringy: function () {
+			var that = this;
+			var graph = new Springy();
+			var generateGraph = function (context, parentName, first) {
+				if(typeof first === 'undefined'){
 					var first = graph.newNode({label: parentName});
-					}
+				}
 				_.each(context.children, function(view, viewname) {
 					var second = graph.newNode({label: viewname});
 					graph.newEdge(first, second, {color: '#000'});
-					blue(view, viewname, second);
+					generateGraph(view, viewname, second);
 				});
-				console.log('next');
-				return ;
+				return;
 			}
-		blue(that.options.appView, 'AppView');
+			
+			generateGraph(this.options.appView, 'AppView');
+			
 			$('#springydemo').remove();
 			$('.springy-container').html('<canvas id="springydemo" width="960px" height="420"></canvas">');
 		  var springy = $('#springydemo');
-			console.log('IM HERERERERER', that.graph);
 			springy.springy({
-				graph: that.graph
+				graph: graph
 			});
-
+		},
+		clean: function () {
+			Events.off('viewCreated', this.renderSpringy);
 		}
-			
-		Events.on('viewCreated', renderSpringy);
-    }
   })
 
   return FooterView;

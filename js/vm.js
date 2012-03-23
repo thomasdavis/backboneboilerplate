@@ -6,15 +6,14 @@ define([
   'events'
 ], function($, _, Backbone, Events){
 	var create = function (context, name, View, options) {
+		// View clean up isn't actually implemented yet but will simply call .clean, .remove and .unbind
 		var view = new View(options);
 		if(typeof context.children === 'undefined'){
 		  context.children = {};
 		  context.children[name] = view;
 		} else {
-		console.log('hrmm', name);
 		  context.children[name] = view;
 		}
-		console.log('errrrrr', name);
 		Events.trigger('viewCreated');
 		return view;
 	}
