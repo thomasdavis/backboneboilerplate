@@ -24,7 +24,7 @@ define([
 					var first = graph.newNode({label: parentName});
 				}
 				_.each(context.children, function(view, viewname) {
-					var second = graph.newNode({label: viewname});
+					var second = graph.newNode({label: viewname + ' (' + view.cid + ')'});
 					graph.newEdge(first, second, {color: '#000'});
 					generateGraph(view, viewname, second);
 				});
@@ -34,7 +34,7 @@ define([
 			generateGraph(this.options.appView, 'AppView');
 			
 			$('#springydemo').remove();
-			$('.springy-container').html('<canvas id="springydemo" width="960px" height="420"></canvas">');
+			$('.springy-container').html('<canvas id="springydemo" width="960px" height="820"></canvas">');
 		  var springy = $('#springydemo');
 			springy.springy({
 				graph: graph

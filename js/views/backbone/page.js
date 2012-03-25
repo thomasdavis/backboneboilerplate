@@ -2,19 +2,20 @@ define([
   'jquery',
   'underscore',
   'backbone',
+	'vm',
   'text!templates/backbone/page.html',
   'views/backbone/sidemenu',
   'views/backbone/section'
-], function($, _, Backbone, backbonePageTemplate, SidemenuView, SectionView){
+], function($, _, Backbone, Vm, backbonePageTemplate, SidemenuView, SectionView){
   var BackbonePage = Backbone.View.extend({
     el: '.page',
     render: function () {
       this.$el.html(backbonePageTemplate);
       
-      var sidemenuView = new SidemenuView();
+      var sidemenuView = Vm.create(this, 'BackboneSideMenuView', SidemenuView);
       sidemenuView.render();
       
-      var sectionView = new SectionView({section: this.options.section});
+      var sectionView = Vm.create(this, 'BackboneSectionView', SectionView, {section: this.options.section});
       sectionView.render();
     }
   });

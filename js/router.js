@@ -49,7 +49,6 @@ define([
 		router.on('route:manager', function () {
 			require(['views/manager/page'], function (ManagerPage) {
 				var managerPage = Vm.create(appView, 'ManagerPage', ManagerPage);
-				//var managerPage = new ManagerPage();
 				managerPage.render();
 			});
 		});
