@@ -9,7 +9,7 @@ function($, _, Backbone, Vm) {
     var AppRouter = Backbone.Router.extend({
         routes: {
             // Pages
-            // 'newpage':'nameYourRouteHere',
+            '/newpage':'nameYourRouteHere',
 
             // Default - catch all
             '*actions': 'defaultAction'
@@ -25,18 +25,16 @@ function($, _, Backbone, Vm) {
         //**********//
         //
         // New Page
-        // 
+        //
         //**********//
-		// uncomment to use
-		
-        // router.on('route:nameYourRouteHere',
-        //        function() {
-        //            require(['views/newpage/page'],
-        //            function(OptimizePage) {
-        //                var optimizePage = Vm.create(appView, 'newPage', OptimizePage);
-        //                optimizePage.render();
-        //            });
-        //        });
+        router.on('route:nameYourRouteHere',
+        function() {
+            require(['views/newpage/page'],
+            function(NewPage) {
+                var NewPage = Vm.create(appView, 'NewPage', NewPage);
+                NewPage.render();
+            });
+        });
 
         //**********//
         //
@@ -45,9 +43,9 @@ function($, _, Backbone, Vm) {
         //**********//
         router.on('route:defaultAction',
         function(actions) {
-            require(['views/newpage/page'],
+            require(['views/dashboard/page'],
             function(DashboardPage) {
-                var dashboardPage = Vm.create(appView, 'newPage', DashboardPage);
+                var dashboardPage = Vm.create(appView, 'DashboardPage', DashboardPage);
                 dashboardPage.render();
             });
         });
