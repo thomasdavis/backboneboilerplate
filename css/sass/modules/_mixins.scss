@@ -1,0 +1,21 @@
+// Default font
+@mixin typeface {
+    // From: Better Helvetica Font Stack http://j.mp/9t6O6Z
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+@mixin clearfix() {
+    // http://nicolasgallagher.com/micro-clearfix-hack/
+    // USAGE: @include clearfix();
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
