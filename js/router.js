@@ -55,7 +55,6 @@ define([
     Backbone.history.start();
   };
   return {
-    initialize: initialize,
-    navigate: router.navigate
+    initialize: initialize
   };
 });
