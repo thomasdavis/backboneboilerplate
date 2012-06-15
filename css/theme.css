@@ -4,7 +4,7 @@
 /*
 ## Main Menu Template
 ```
-<div class="top-divider"></div>
+<div class="divider"></div>
 <div class="main-menu">
 	<ul>
 		<li><a href="">Home</a></li>
@@ -16,7 +16,7 @@
 	</ul>
 	<div style="clear: both;"></div>
 </div>
-<div class="bottom-divider"></div>
+<div class="divider"></div>
 
 ```
 ## Main Menu Styles
@@ -27,7 +27,6 @@
 }
 .main-menu ul {
 	margin: 0;
-  font-family: 'Squada One';
 	padding: 0;
 	list-style: none;
 }
@@ -49,13 +48,10 @@
 	background: #c0c0c0;
 	border-radius: 6px;
 }
-.top-divider {  
+.divider {  
 	clear: both;
   border-top: 1px solid #919191;
-}
-.bottom-divider {
-	clear: both;
-	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
 }
 /*
 
@@ -68,7 +64,6 @@
 */
 
 .h3 {
-  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -95,7 +90,6 @@ adadasd
 */
 
 .action-list {
-  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -118,6 +112,10 @@ adadasd
 body {
 	background: #dddddd url('../images/page_bg.png');
 	color: #11141b;
+	font-family: 'PT Sans', sans-serif;
+}
+.page {
+	margin-top: 20px;
 }
 .logo {
 	color: #5a4935;
@@ -141,7 +139,7 @@ Boilerplate Stamp!
 .bp_logo {
 	width: 280px;
 	height: 266px;
-	background: url('../../images/backboneboilerplate_logo.png');
+	background: url('../images/backboneboilerplate_logo.png');
 }
 /*
 ## Logo
