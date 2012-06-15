@@ -4,7 +4,7 @@
 /*
 ## Main Menu Template
 ```
-<div class="top-divider"></div>
+<div class="divider"></div>
 <div class="main-menu">
 	<ul>
 		<li><a href="">Home</a></li>
@@ -16,7 +16,7 @@
 	</ul>
 	<div style="clear: both;"></div>
 </div>
-<div class="bottom-divider"></div>
+<div class="divider"></div>
 
 ```
 ## Main Menu Styles
@@ -49,13 +49,10 @@
 	background: #c0c0c0;
 	border-radius: 6px;
 }
-.top-divider {  
+.divider {  
 	clear: both;
   border-top: 1px solid #919191;
-}
-.bottom-divider {
-	clear: both;
-	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
 }
 /*
 
@@ -118,6 +115,9 @@ adadasd
 body {
 	background: #dddddd url('../images/page_bg.png');
 	color: #11141b;
+}
+.page {
+	margin-top: 20px;
 }
 .logo {
 	color: #5a4935;
