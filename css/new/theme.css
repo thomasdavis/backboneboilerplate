@@ -21,6 +21,15 @@ hr top
 hr bottom  
 \#ececec
 
+
+## Fonts
+
+Body  
+PT Sans
+
+Header  
+Squada One
+
 */
 
 
@@ -37,7 +46,6 @@ adadasd
 */
 
 .action-list {
-  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
