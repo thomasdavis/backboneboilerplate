@@ -72,6 +72,35 @@
 
 /*
 
+## Main Menu Template
+```
+<ul class="main-menu">
+	<li><a href="">Home</a></li>
+	<li><a href="">Modules</a></li>
+	<li><a href="">Optimize</a></li>
+	<li><a href="">Backbone</a></li>
+	<li><a href="">Views</a></li>
+	<li><a href="">Feedback</a></li>
+</ul>
+```
+## Main Menu Styles
+*/
+.main-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-menu li {
+	margin-right: 10px;
+	float: left;
+}
+.main-menu li a {
+	padding: 10px;
+}
+
+/*
+
 ## Action buttons
 
 adadasd
