@@ -4,7 +4,7 @@
 /*
 ## Main Menu Template
 ```
-<div class="divider"></div>
+<div class="top-divider"></div>
 <div class="main-menu">
 	<ul>
 		<li><a href="">Home</a></li>
@@ -16,7 +16,7 @@
 	</ul>
 	<div style="clear: both;"></div>
 </div>
-<div class="divider"></div>
+<div class="bottom-divider"></div>
 
 ```
 ## Main Menu Styles
@@ -44,14 +44,18 @@
 	text-decoration: none;
 	display: inline-block;
 }
+.main-menu li a.active,
 .main-menu li a:hover {
 	background: #c0c0c0;
 	border-radius: 6px;
 }
-.divider {  
+.top-divider {  
 	clear: both;
   border-top: 1px solid #919191;
-  border-bottom: #ececec;  
+}
+.bottom-divider {
+	clear: both;
+	border-top: 1px solid #ececec;
 }
 /*
 
@@ -72,32 +76,7 @@
 
 /*
 
-## Main Menu Template
-```
-<ul class="main-menu">
-	<li><a href="">Home</a></li>
-	<li><a href="">Modules</a></li>
-	<li><a href="">Optimize</a></li>
-	<li><a href="">Backbone</a></li>
-	<li><a href="">Views</a></li>
-	<li><a href="">Feedback</a></li>
-</ul>
-```
-## Main Menu Styles
-*/
-.main-menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
 
-.main-menu li {
-	margin-right: 10px;
-	float: left;
-}
-.main-menu li a {
-	padding: 10px;
-}
 
 /*
 
@@ -134,11 +113,39 @@ adadasd
 	color: #594936;
 }	
 
+
+
 body {
-	background: #dddddd;
+	background: #dddddd url('../images/page_bg.png');
 	color: #11141b;
 }
+.logo {
+	color: #5a4935;
+	padding: 0;
+	margin: 20px 0 10px 0;
+  font-family: 'Squada One';
+  font-size: 45px;
+  text-transform: uppercase;
+}
 /*
+
+Boilerplate Stamp!
+
+```
+<div class="bp_logo"></div>
+```
+*/
+.bp_logo {
+	width: 280px;
+	height: 266px;
+	background: url('../../images/backboneboilerplate_logo.png');
+}
+/*
+## Logo
+```
+<h1 class="logo">BACKBONE BOILERPLATE</h1>
+```
+
 ## Colors
 
 For the page header and links  
