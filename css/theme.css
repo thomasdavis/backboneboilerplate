@@ -122,9 +122,12 @@ body {
 .logo {
 	color: #5a4935;
 	padding: 0;
-	margin: 20px 0 10px 0;
+	margin: 0;
+  text-shadow: 0 1px 1px #fff;
+  text-align: center;
   font-family: 'Squada One';
-  font-size: 45px;
+  font-size: 114px;
+  font-weight: normal;
   text-transform: uppercase;
 }
 /*
