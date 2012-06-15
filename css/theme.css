@@ -27,7 +27,6 @@
 }
 .main-menu ul {
 	margin: 0;
-  font-family: 'Squada One';
 	padding: 0;
 	list-style: none;
 }
@@ -65,7 +64,6 @@
 */
 
 .h3 {
-  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -92,7 +90,6 @@ adadasd
 */
 
 .action-list {
-  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -115,6 +112,7 @@ adadasd
 body {
 	background: #dddddd url('../images/page_bg.png');
 	color: #11141b;
+	font-family: 'PT Sans', sans-serif;
 }
 .page {
 	margin-top: 20px;
