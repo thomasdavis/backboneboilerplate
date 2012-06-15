@@ -1,15 +1,21 @@
 /*
+
+
 # Backbone Boilerplate
 
 Some more information goes here
 
 */
 
-
-/* Third party helper libraries */
+/* 
+### Third Party
+*/
 @import url("normalize.css");
+@import url("960.css");
 
-/* Custom themes */
+/* 
+### Custom themes
+*/
 @import url("theme.css");
 
 /*
