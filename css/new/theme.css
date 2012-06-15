@@ -1,0 +1,30 @@
+/*
+
+## Action buttons
+adadasd
+```
+<ul class="action-list">
+	<li><a href="">download zip</a></li>
+	<li><a href="">view the source</a></li>
+	<li><a href="">watch</a></li>
+	<li><a href="">fork</a></li>
+```
+*/
+
+.action-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.action-list li {
+
+	text-align: center;
+}
+.action-list li a {
+	font-size: 34px;
+	color: #594936;
+	font-weight: bold;
+}
+.action-list li a:visited {
+	color: #594936;
+}	
