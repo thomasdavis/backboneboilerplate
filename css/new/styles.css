@@ -1,5 +1,10 @@
-/* Not really too concerned with how to organize CSS 
-   the opinions are too diverse                      */
+/*
+# Backbone Boilerplate
+
+Some more information goes here
+
+*/
+
 
 /* Third party helper libraries */
 @import url("normalize.css");
@@ -7,3 +12,7 @@
 /* Custom themes */
 @import url("theme.css");
 
+/*
+### Google font
+*/
+@import url("http://fonts.googleapis.com/css?family=Squada+One");

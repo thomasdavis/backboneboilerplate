@@ -1,5 +1,30 @@
 /*
+## Colors
 
+For the page header and links  
+\#5a4935
+
+For body text  
+\#11141b
+
+For Navigation links  
+\#515151
+
+For Navigation current state  
+\#c0c0c0
+
+Body Background color  
+\#dddddd
+
+hr top  
+\#919191  
+hr bottom  
+\#ececec
+
+*/
+
+
+/*
 ## Action buttons
 adadasd
 ```
@@ -12,6 +37,7 @@ adadasd
 */
 
 .action-list {
+  font-family: 'Squada One';
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -28,3 +54,5 @@ adadasd
 .action-list li a:visited {
 	color: #594936;
 }	
+
+
