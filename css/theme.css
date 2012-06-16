@@ -21,8 +21,13 @@
 ```
 ## Main Menu Styles
 */
-.main-menu {
 
+
+.main-menu-container {
+  margin-bottom: 20px;
+}
+
+.main-menu {
 	margin: 10px 0 10px 0;
 }
 .main-menu ul {
@@ -129,10 +134,6 @@ body {
   font-size: 14px;
 }
 
-.page {
-	margin-top: 20px;
-}
-
 .logo {
 	color: #5a4935;
 	padding: 0;
@@ -140,7 +141,7 @@ body {
   text-shadow: 0 1px 1px #fff;
   text-align: center;
   font-family: 'Squada One';
-  font-size: 114px;
+  font-size: 112px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -174,7 +175,6 @@ code, pre {
   display: block;
   font-family: monospace;
   padding: 10px;
-  width: 620px;
 }
 
 /*
