@@ -72,10 +72,15 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Squada One';
   font-weight: normal;
+  margin: 0;
+  line-height: 1em;
 }
 
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.6em; }
+h2 { font-size: 40px; }
+h3 { font-size: 36px; }
+h4 { font-size: 32px; }
+h5 { font-size: 28px; }
+h6 { font-size: 24px; }
 
 /*
 
@@ -121,10 +126,13 @@ body {
 	background: #dddddd url('../images/page_bg.png');
 	color: #11141b;
 	font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
 }
+
 .page {
 	margin-top: 20px;
 }
+
 .logo {
 	color: #5a4935;
 	padding: 0;
@@ -149,6 +157,26 @@ Boilerplate Stamp!
 	height: 266px;
 	background: url('../images/backboneboilerplate_logo.png');
 }
+
+#springydemo {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.container {
+  margin-bottom: 150px;
+}
+
+code, pre {
+  background-color: #F8F8F8;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  display: block;
+  font-family: monospace;
+  padding: 10px;
+  width: 620px;
+}
+
 /*
 ## Logo
 ```
