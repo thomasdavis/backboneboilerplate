@@ -69,6 +69,14 @@
 	padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Squada One';
+  font-weight: normal;
+}
+
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+
 /*
 
 
