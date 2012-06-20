@@ -12,5 +12,5 @@ define([
 
   });
 
-  return new projectsCollection;
+  return projectsCollection;
 });
