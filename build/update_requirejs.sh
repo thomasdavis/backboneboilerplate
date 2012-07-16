@@ -16,7 +16,7 @@ REQUIREJS_URI=`curl -f http://requirejs.org/docs/download.html 2>> /dev/null | \
 RJS_VERSION=`echo $REQUIREJS_URI | grep -o [0-9]\.[0-9]\.[0-9]`
 
 # Don't update unless we have to
-BASE_RJS_VERSION=`cat .rjs_version`
+BASE_RJS_VERSION=`cat .requirejs_version`
 if [[ $RJS_VERSION = $BASE_RJS_VERSION ]] ; then
   echo "You're version of requireJS is up to date with the latest stable version ($RJS_VERSION)" >& 2
   exit 0
