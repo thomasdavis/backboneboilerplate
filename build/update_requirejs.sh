@@ -22,6 +22,18 @@ if [[ $RJS_VERSION = $BASE_RJS_VERSION ]] ; then
   exit 0
 fi
 
+echo "You're about to upgrade requireJS from version $BASE_RJS_VERSION to $RJS_VERSION."
+echo -n "Would you like to continue? [y/N]: "
+
+read CONFIRM
+if [[ "$CONFIRM" = "N" ]] ; then
+  echo "Update aborted"
+  exit 2
+elif [[ "$CONFIRM" != "y" ]] ; then
+  echo "Unrecognized response"
+  exit 3
+fi
+
 echo "Fetching requireJS v$RJS_VERSION"
 REQUIRE_PATH=`dirname $PWD`/js/libs/require
 # If, for some reason, curl fails, we'll still have our old copy of require
