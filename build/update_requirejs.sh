@@ -51,3 +51,6 @@ fi
 
 sed -i "" "s/^REQUIRE_VERSION='[0-9]\.[0-9]\.[0-9]'/REQUIRE_VERSION='$RJS_VERSION'/g" ./build.sh
 echo "Build script has been updated to use the latest requireJS version"
+
+# Finally, store the new version of requireJS in .requirejs_version
+echo $RJS_VERSION > .requirejs_version
