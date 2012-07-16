@@ -15,6 +15,13 @@ REQUIREJS_URI=`curl -f http://requirejs.org/docs/download.html 2>> /dev/null | \
   grep -o 'http://requirejs.org/docs/release/[0-9]\.[0-9]\.[0-9]/minified/require.js'`
 RJS_VERSION=`echo $REQUIREJS_URI | grep -o [0-9]\.[0-9]\.[0-9]`
 
+# Don't update unless we have to
+BASE_RJS_VERSION=`cat .rjs_version`
+if [[ $RJS_VERSION = $BASE_RJS_VERSION ]] ; then
+  echo "You're version of requireJS is up to date with the latest stable version ($RJS_VERSION)" >& 2
+  exit 0
+fi
+
 echo "Fetching requireJS v$RJS_VERSION"
 REQUIRE_PATH=`dirname $PWD`/js/libs/require
 # If, for some reason, curl fails, we'll still have our old copy of require
