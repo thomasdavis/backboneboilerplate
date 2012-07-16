@@ -49,5 +49,5 @@ else
   echo "requireJS has been updated and placed in its proper place in the libs folder"
 fi
 
-sed -i "" "s/REQUIRE_PATH='[0-9]\.[0-9]\.[0-9]'/REQUIRE_PATH='$RJS_VERSION'/g" ./build.sh
+sed -i "" "s/^REQUIRE_VERSION='[0-9]\.[0-9]\.[0-9]'/REQUIRE_VERSION='$RJS_VERSION'/g" ./build.sh
 echo "Build script has been updated to use the latest requireJS version"
