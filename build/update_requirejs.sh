@@ -27,5 +27,5 @@ if [[ $? -ne 0 ]] ; then
 else
   # Remove the old version of require completely
   rm -f ../js/libs/require/require.js.old
-  echo "requireJS has been updated and placed in $REQUIRE_PATH"
+  echo "requireJS has been updated and placed in its proper place in the libs folder"
 fi
