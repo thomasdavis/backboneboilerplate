@@ -1,7 +1,4 @@
-<iframe style="border: 0; margin: 0; padding: 0;"
-        src="https://www.gittip.com/thomasdavis/widget.html" 
-        width="48pt" height="20pt"></iframe>
-        
+ 
 # Backbone boilerplate 
 [http://backboneboilerplate.com](http://backboneboilerplate.com) is a community driven effort to help developers learn and rapidly deploy single page web applications.
 
