@@ -6,15 +6,15 @@
 ```
 <div class="divider"></div>
 <div class="main-menu">
-	<ul>
-		<li><a href="">Home</a></li>
-		<li><a href="">Modules</a></li>
-		<li><a href="">Optimize</a></li>
-		<li><a href="">Backbone</a></li>
-		<li><a href="">Views</a></li>
-		<li><a href="">Feedback</a></li>
-	</ul>
-	<div style="clear: both;"></div>
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Modules</a></li>
+    <li><a href="">Optimize</a></li>
+    <li><a href="">Backbone</a></li>
+    <li><a href="">Views</a></li>
+    <li><a href="">Feedback</a></li>
+  </ul>
+  <div style="clear: both;"></div>
 </div>
 <div class="divider"></div>
 
@@ -28,35 +28,35 @@
 }
 
 .main-menu {
-	margin: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 .main-menu ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-menu li {
-	margin-right: 10px;
-	float: left;
+  margin-right: 10px;
+  float: left;
 }
 .main-menu li a,
 .main-menu li a:visited {
-	padding: 5px;
-	color: #515151;
-	font-size: 18px;
-	text-decoration: none;
-	display: inline-block;
+  padding: 5px;
+  color: #515151;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
 }
 .main-menu li a.active,
 .main-menu li a:hover {
-	background: #c0c0c0;
-	border-radius: 6px;
+  background: #c0c0c0;
+  border-radius: 6px;
 }
 .divider {  
-	clear: both;
+  clear: both;
   border-top: 1px solid #919191;
-	border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 /*
 
@@ -69,9 +69,9 @@
 */
 
 .h3 {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,45 +99,45 @@ adadasd
 <span class="fixie"></span>
 ```
 <ul class="action-list">
-	<li><a href="">download zip</a></li>
-	<li><a href="">view the source</a></li>
-	<li><a href="">watch</a></li>
-	<li><a href="">fork</a></li>
+  <li><a href="">download zip</a></li>
+  <li><a href="">view the source</a></li>
+  <li><a href="">watch</a></li>
+  <li><a href="">fork</a></li>
 </ul>
 ```
 */
 
 .action-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .action-list li {
 
-	text-align: center;
+  text-align: center;
 }
 .action-list li a {
-	font-size: 34px;
-	color: #594936;
-	font-weight: bold;
+  font-size: 34px;
+  color: #594936;
+  font-weight: bold;
 }
 .action-list li a:visited {
-	color: #594936;
-}	
+  color: #594936;
+}  
 
 
 
 body {
-	background: #dddddd url('../images/page_bg.png');
-	color: #11141b;
-	font-family: 'PT Sans', sans-serif;
+  background: #dddddd url('../images/page_bg.png');
+  color: #11141b;
+  font-family: 'PT Sans', sans-serif;
   font-size: 14px;
 }
 
 .logo {
-	color: #5a4935;
-	padding: 0;
-	margin: 0;
+  color: #5a4935;
+  padding: 0;
+  margin: 0;
   text-shadow: 0 1px 1px #fff;
   text-align: center;
   font-family: 'Squada One';
@@ -154,9 +154,9 @@ Boilerplate Stamp!
 ```
 */
 .bp_logo {
-	width: 280px;
-	height: 266px;
-	background: url('../images/backboneboilerplate_logo.png');
+  width: 280px;
+  height: 266px;
+  background: url('../images/backboneboilerplate_logo.png');
 }
 
 #springydemo {

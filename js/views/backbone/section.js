@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-	'vm'
+  'vm'
 ], function($, _, Backbone, Vm){
   var BackbonePage = Backbone.View.extend({
     el: '.content',
