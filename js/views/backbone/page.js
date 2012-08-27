@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-	'vm',
+  'vm',
   'text!templates/backbone/page.html',
   'views/backbone/sidemenu',
   'views/backbone/section'

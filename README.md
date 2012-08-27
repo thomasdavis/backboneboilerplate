@@ -1,5 +1,5 @@
- 
-# Backbone boilerplate 
+
+# Backbone boilerplate
 [http://backboneboilerplate.com](http://backboneboilerplate.com) is a community driven effort to help developers learn and rapidly deploy single page web applications.
 
 ## Philosophy
