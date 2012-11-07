@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, headerMenuTemplate){
   var HeaderMenuView = Backbone.View.extend({
     el: '.main-menu-container',
-    intialize: function () {
+    initialize: function () {
     },
     render: function () {
       $(this.el).html(headerMenuTemplate);
