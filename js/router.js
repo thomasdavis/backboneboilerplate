@@ -8,11 +8,11 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Pages
-      '/modules': 'modules',
-      '/optimize': 'optimize',
-      '/backbone/:section': 'backbone',
-      '/backbone': 'backbone',
-      '/manager': 'manager',
+      'modules': 'modules',
+      'optimize': 'optimize',
+      'backbone/:section': 'backbone',
+      'backbone': 'backbone',
+      'manager': 'manager',
       
       // Default - catch all
       '*actions': 'defaultAction'
