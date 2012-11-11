@@ -1,6 +1,6 @@
 define([
   'jquery',
-  'underscore',
+  'lodash',
   'backbone',
   'models/projects'
 ], function($, _, Backbone, projectsModel){

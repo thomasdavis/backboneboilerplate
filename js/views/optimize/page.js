@@ -1,6 +1,6 @@
 define([
   'jquery',
-  'underscore',
+  'lodash',
   'backbone',
   'text!templates/optimize/page.html'
 ], function($, _, Backbone, optimizePageTemplate){

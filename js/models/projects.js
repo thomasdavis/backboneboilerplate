@@ -1,5 +1,5 @@
 define([
-  'underscore',
+  'lodash',
   'backbone'
 ], function(_, Backbone) {
   var projectsModel = Backbone.Model.extend({

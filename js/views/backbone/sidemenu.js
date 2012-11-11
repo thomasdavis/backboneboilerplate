@@ -1,6 +1,6 @@
 define([
   'jquery',
-  'underscore',
+  'lodash',
   'backbone',
   'text!templates/backbone/sidemenu.html',
 ], function($, _, Backbone, sidemenuTemplate){
