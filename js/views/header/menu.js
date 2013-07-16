@@ -10,14 +10,14 @@ define([
     },
     render: function () {
       $(this.el).html(headerMenuTemplate);
-      $('a[href="' + window.location.hash + '"]').addClass('active');
+      $('a[href="' + window.location.hash + '"]').parent().addClass('active');
     },
     events: {
       'click a': 'highlightMenuItem'
     },
     highlightMenuItem: function (ev) {
       $('.active').removeClass('active');
-      $(ev.currentTarget).addClass('active');
+      $(ev.currentTarget).parent().addClass('active');
     }
   })
 
