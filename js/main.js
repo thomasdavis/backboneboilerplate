@@ -1,6 +1,7 @@
 // Require.js allows us to configure shortcut alias
-// Their usage will become more apparent futher along in the tutorial.
-require.config({
+// Their usage will become more apparent further along in the tutorial.
+requirejs.config({
+  baseUrl: "js",
   paths: {
     // Major libraries
     jquery: 'libs/jquery/jquery-min',
@@ -15,8 +16,16 @@ require.config({
     // Just a short cut so we can put our html outside the js dir
     // When you have HTML/CSS designers this aids in keeping them out of the js directory
     templates: '../templates'
+  },
+  useStrict: true,
+  shim: {
+    "underscore": {
+      exports: '_'
+    },
+    "backbone": {
+      deps: ["underscore", "jquery"],
+      exports: 'Backbone' }
   }
-
 });
 
 // Let's kick off the application

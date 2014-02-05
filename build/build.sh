@@ -5,7 +5,7 @@ node r.js -o build.js
 node r.js -o cssIn=../css/styles.css out=output/css/styles.css
 
 cp ../index.html output/index.html
-REQUIRE_VERSION='2.1.5'
+REQUIRE_VERSION='2.1.6'
 SEDCMD='sed -i'
 if [[ $OSTYPE == *"darwin"* ]]; then
   SEDCMD=$SEDCMD' .tmp'
